@@ -16,3 +16,12 @@ Contexto do projeto:
 - https://idesam.org/calculadora/
 
 O projeto tem importância na questão da poluição e emissão de gases tóxicos para o ambiente especificamente em Portugal. Sendo relevante no sentido de minimizar este problema pela passagem de informação e educação dos utilizadores.
+
+## Casos de utilização:
+
+### Preencher formulário
+**Descrição:** \
+O utilizador preenche os campos de resposta do formulário.
+
+**Pré-condições:**
+-Inserir dados pessoais
