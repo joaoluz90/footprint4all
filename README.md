@@ -24,7 +24,7 @@ O projeto tem importância na questão da poluição e emissão de gases tóxico
 O utilizador preenche os campos de resposta do formulário, e submete o mesmo.
 
 **Pré-condições:**\
--Inserir dados pessoais
+- Inserir dados pessoais
 
 **Passo a passo:**
 1. O utilizador seleciona/preenche os campos de resposta.
