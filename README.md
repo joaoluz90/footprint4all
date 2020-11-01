@@ -68,6 +68,9 @@ O utilizador, depois de preencher o formulário associado aos seus dados visuali
 
 ## Referências:
 [1] Emissões de gases com efeito de estufa. Acedido em: 30/10/2020, em: https://rea.apambiente.pt/content/emiss%C3%B5es-de-gases-com-efeito-de-estufa
+
 [2] Calculadora de CO2. Acedido em: 30/10/2020, em: https://idesam.org/calculadora/
+
 [3] Impostosobreveiculos. Acedido em: 31/10/2020, em https://impostosobreveiculos.info/dados-uteis/como-conhecer-as-emissoes-co2-de-um-automovel/
+
 [4] Automais.autosport. Acedido em 31/10/2020, em https://automais.autosport.pt/noticias/emissoes-de-co2-5-dicas-para-seu-carro-poluir-menos/
