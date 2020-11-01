@@ -31,8 +31,22 @@ O utilizador preenche os campos de resposta do formulário, e submete o mesmo.
 2. Submete o formulário com as respostas dadas.
 
 **Pós-condições:**
-- Receber os resultados e uma resposta personalizada ao formukários realizado.
+- Receber os resultados e uma resposta personalizada ao formulário realizado.
 
 ### Inserir dados pessoais
 **Descrição:**
 O utilizador disponibiliza dados em relação à sua pessoa e localização.
+
+**Pré-condições:**
+- NA
+
+**Passo a passo:**
+1. O utilizador insere dados relativos à sua localização (Ex:distrito).
+2. O utilizador insere dados pessoais.
+
+**Pós-condições:**
+-Aceder ao formulário.
+
+### Visualizar
+**Descrição:**
+O utilizador preenche os campos de resposta do formulário, e submete o mesmo.
