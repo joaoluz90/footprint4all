@@ -43,10 +43,19 @@ O utilizador disponibiliza dados em relação à sua pessoa e localização.
 **Passo a passo:**
 1. O utilizador insere dados relativos à sua localização (Ex:distrito).
 2. O utilizador insere dados pessoais.
+3. Submete o formulário
 
 **Pós-condições:**
+
 -Aceder ao formulário.
 
-### Visualizar
+### Visualizar resultados 
 **Descrição:**
-O utilizador preenche os campos de resposta do formulário, e submete o mesmo.
+O utilizador, depois de preencher o formulário associado aos seus dados visulasiza os resultados presonalizados do mesmo.
+
+**Pré-condições:**
+- Preencher secção dos dados pessoais
+- Responder ao formulário
+
+**Passo a passo:**
+1. 
