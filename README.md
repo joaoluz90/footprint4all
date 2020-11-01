@@ -14,4 +14,5 @@ O projeto denominado de Footprint4all tem como objetivo informar e educar os uti
 Contexto do projeto:
 - https://rea.apambiente.pt/content/emiss%C3%B5es-de-gases-com-efeito-de-estufa
 - https://idesam.org/calculadora/
+
 O projeto tem importância na questão da poluição e emissão de gases tóxicos para o ambiente especificamente em Portugal. Sendo relevante no sentido de minimizar este problema pela passagem de informação e educação dos utilizadores.
