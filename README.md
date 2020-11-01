@@ -51,7 +51,7 @@ O utilizador disponibiliza dados em relação à sua pessoa e localização.
 
 ### Visualizar resultados 
 **Descrição:**
-O utilizador, depois de preencher o formulário associado aos seus dados visulasiza os resultados presonalizados do mesmo.
+O utilizador, depois de preencher o formulário associado aos seus dados visualiza os resultados presonalizados do mesmo.
 
 **Pré-condições:**
 - Preencher secção dos dados pessoais
