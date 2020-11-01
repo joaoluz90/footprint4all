@@ -58,4 +58,8 @@ O utilizador, depois de preencher o formulário associado aos seus dados visuali
 - Responder ao formulário
 
 **Passo a passo:**
-1. 
+- NA
+
+**Pós-condições:**
+
+- NA.
