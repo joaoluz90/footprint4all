@@ -16,9 +16,9 @@
 
 ## Casos de utilização:
 
-### Preencher formulário
+### Preencher formulário 
 **Descrição:**
-O utilizador preenche os campos de resposta do formulário, e submete o mesmo.
+O utilizador preenche os campos de resposta do formulário, e submete o mesmo. O formulário baseia-se em obter os comportamentos poluentes do quotidiano do utilizador, e de direta ou indiretamente calcular as suas emissões de dióxido de carbono
 
 **Pré-condições:**
 - Inserir dados pessoais
