@@ -64,4 +64,4 @@ O utilizador, depois de responder a um formulário terá a sua classificação d
 
 ## Referências:
 [1] Emissões de gases com efeito de estufa. Acedido em: 30/10/2020, em: https://rea.apambiente.pt/content/emiss%C3%B5es-de-gases-com-efeito-de-estufa
-
+[2] Carbon Calculator. Acedido em: 24/12/2020, em: https://www.carbonfootprint.com/calculator.aspx
