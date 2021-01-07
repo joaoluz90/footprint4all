@@ -26,40 +26,41 @@ O utilizador preenche os campos de resposta do formulário, e submete o mesmo. O
 **Passo a passo:**
 1. O utilizador seleciona/preenche os campos de resposta.
 2. Submete o formulário com as respostas dadas.
+3. A aplicação confirma a submissão do formulário.
 
 **Pós-condições:**
 - Receber os resultados e uma resposta personalizada ao formulário realizado.
 
-### Inserir dados pessoais
+### Verificar formulários realizados
 **Descrição:**
-O utilizador disponibiliza dados em relação à sua pessoa e localização.
+O utilizador tem acesso a todos os formulários feitos por si. Pode visualizar os formulários respondidos individualmente.
 
 **Pré-condições:**
-- NA
+- Ter feito formulários previamente.
 
 **Passo a passo:**
-1. O utilizador insere dados relativos à sua localização (Ex:distrito).
-2. O utilizador insere dados pessoais.
-3. Submete o formulário
+1. O utilizador vai ao seu histórico de "formulários realizados".
+2. Visualiza a lista de formulários realizados com as devidas respostas.
+3. Seleciona qual formulário respondido quer visualizar.
 
 **Pós-condições:**
 
--Aceder ao formulário.
+-N/A
 
-### Visualizar resultados 
+### Visualizar classificação 
 **Descrição:**
-O utilizador, depois de preencher o formulário associado aos seus dados visualiza os resultados presonalizados do mesmo.
+O utilizador, depois de responder a um formulário terá a sua classificação dependendo das respostas que dá. A classificação passa pelo nível de poluição em que o utilizador está envolvido. Numa escala de 1 a 5, com descrição de cada nível da escala.
 
 **Pré-condições:**
-- Preencher secção dos dados pessoais
-- Responder ao formulário
+- Preencher formulário
 
 **Passo a passo:**
-- NA
+- O utilizador acede ao "histórico de classificações".
+-Visualiza qual a classificação atribuída a cada formulário realizado
 
 **Pós-condições:**
 
-- Registo do formulário e dos seus resultados associado à pessoa que o realizou.
+-N/A
 
 ## Referências:
 [1] Emissões de gases com efeito de estufa. Acedido em: 30/10/2020, em: https://rea.apambiente.pt/content/emiss%C3%B5es-de-gases-com-efeito-de-estufa
