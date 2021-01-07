@@ -56,7 +56,7 @@ O utilizador, depois de responder a um formulário terá a sua classificação d
 
 **Passo a passo:**
 - O utilizador acede ao "histórico de classificações".
--Visualiza qual a classificação atribuída a cada formulário realizado
+- Visualiza qual a classificação atribuída a cada formulário realizado.
 
 **Pós-condições:**
 
