@@ -164,3 +164,5 @@ insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2019-10-22 2
 insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2013-09-21 19:04:00', '28', '1');
 insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2014-08-20 18:03:00', '29', '5');
 insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2016-07-19 17:02:00', '30', '4');
+
+commit;
