@@ -35,7 +35,7 @@ public class UtilizadorController {
     public Utilizador getUtilizador(@PathVariable int id) {
         logger.info("Sending user with id "+id);
         Optional<Utilizador> _utilizador = utilizadorRepository.findById(id);
-        if (_utilizador.isEmpty()) throw new NotFoundException(""+id,"Escala","id");
+        if (_utilizador.isEmpty()) throw new NotFoundException(""+id,"Utilizador","id");
         else return _utilizador.get() ;
     }
 
