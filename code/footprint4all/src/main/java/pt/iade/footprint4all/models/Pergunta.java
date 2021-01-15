@@ -23,6 +23,8 @@ public class Pergunta {
 
     public Pergunta() {}
 
+    
+
     public int getId() {
         return id;
     }

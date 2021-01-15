@@ -44,4 +44,15 @@ public class Escala {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public List<Classificado> getClassificacoes() {
+        return classificacoes;
+    }
+
+    public void setClassificacoes(List<Classificado> classificacoes) {
+        this.classificacoes = classificacoes;
+    }
+
+    
 }
+

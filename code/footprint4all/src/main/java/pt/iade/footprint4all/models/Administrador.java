@@ -32,6 +32,8 @@ public class Administrador {
 
     public Administrador() {}
 
+    
+
     public Date getDatainicio() {
         return datainicio;
     }
@@ -54,6 +56,22 @@ public class Administrador {
 
     public void setEdits(List<Edita> edits) {
         this.edits = edits;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Utilizador getUtilizador() {
+        return utilizador;
+    }
+
+    public void setUtilizador(Utilizador utilizador) {
+        this.utilizador = utilizador;
     }
     
 }

@@ -17,7 +17,7 @@ public class Resposta {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="res_id") private int id;
     @Column(name="res_string") private String string;
-    @ManyToOne @JoinColumn(name = "per_res_id") @JsonIgnoreProperties({ "respostas" }) private Pergunta pergunta;
+    @ManyToOne @JoinColumn(name = "res_per_id") @JsonIgnoreProperties({ "respostas" }) private Pergunta pergunta;
 
     public Resposta() {}
 
@@ -40,6 +40,6 @@ public class Resposta {
     public void setPergunta(Pergunta pergunta) {
         this.pergunta = pergunta;
     }
-    
+
     
 }

@@ -40,5 +40,39 @@ public class Classificado {
     public void setData(Date data) {
         this.data = data;
     }
+
+    public int getUtilizadorId() {
+        return utilizadorId;
+    }
+
+    public void setUtilizadorId(int utilizadorId) {
+        this.utilizadorId = utilizadorId;
+    }
+
+    public Utilizador getUtilizador() {
+        return utilizador;
+    }
+
+    public void setUtilizador(Utilizador utilizador) {
+        this.utilizador = utilizador;
+    }
+
+    public int getEscalaId() {
+        return escalaId;
+    }
+
+    public void setEscalaId(int escalaId) {
+        this.escalaId = escalaId;
+    }
+
+    public Escala getEscala() {
+        return escala;
+    }
+
+    public void setEscala(Escala escala) {
+        this.escala = escala;
+    }
+
+    
     
 }
