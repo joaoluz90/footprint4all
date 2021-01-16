@@ -47,7 +47,7 @@ O utilizador tem acesso a todos os formulários feitos por si. Pode visualizar o
 
 -N/A
 
-### Visualizar classificação de formulários realizados
+### Visualizar classificação dos utilizadores
 **Descrição:**
 O utilizador, depois de responder a um formulário terá a sua classificação dependendo das respostas que dá. A classificação passa pelo nível de poluição em que o utilizador está envolvido. Numa escala de 1 a 5, com descrição de cada nível da escala.
 
