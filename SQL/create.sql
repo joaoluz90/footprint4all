@@ -1,5 +1,6 @@
 /************************************************************
 *	Grupo: 3   |  Curso: L-IG
+*	Grupo: 3   |  Curso: L-IG
 *  	UC: Bases de Dados
 *
 *	Pojeto: Footprint4all
@@ -8,10 +9,10 @@
 *  	Nome: João Luz (20190798)
 *
 ************************************************************/
+drop database if exists footprint4all;
+Create database footprint4all;
 
-Create database Lab1;
-
-use Lab1;
+use footprint4all;
 
 /************************************************************
 *  Lista de Entidades Informaconais Primárias
@@ -72,8 +73,6 @@ Create Table Utilizador (
     check (uti_idade >= 18),
     check (uti_naci = 'portuguesa'));
     
-	
-    
     
 Create Table Administrador (
 	admi_id int auto_increment,
@@ -82,22 +81,17 @@ Create Table Administrador (
     admi_uti_id int not null unique,
     primary key (admi_id),
     foreign key(admi_uti_id) references Utilizador (uti_id));
-    
+	
 Create Table Seccao (
 	sec_id int auto_increment,
     sec_nome varchar(50) default 'Geral',
-    sec_form_id int not null unique,
-    primary key(sec_id),
-    foreign key(sec_form_id) references Formulario (form_id));
+    primary key(sec_id));
     
 Create Table Pergunta (
 	per_id int auto_increment,
     per_string varchar(100) not null,
-    per_sec_id int not null unique,
-    per_res_id int not null unique,
     per_perTipo_id int not null unique,
     primary key(per_id),
-    foreign key(per_sec_id) references Seccao (sec_id),
     foreign key(per_perTipo_id) references PerTipo (perTipo_id));
     
 Create Table Resposta (
@@ -105,13 +99,12 @@ Create Table Resposta (
     res_string varchar(100) default 'Sem resposta',
     res_data date,
     res_resTipo_id int not null unique,
-    res_per_id int not null unique, 
     res_uti_id int not null unique,
-    res_form_id int not null unique unique,
+    res_quest_id int not null unique,
     primary key(res_id),
-    foreign key(res_per_id) references Pergunta (per_id),
+    foreign key(res_resTipo_id) references restipo (resTipo_id),
     foreign key(res_uti_id) references Utilizador (uti_id));
-
+    
 
 /************************************************************
 *  Lista de Entidades de Associação 
@@ -139,26 +132,16 @@ Create Table da(
     foreign key(da_uti_id) references Utilizador (uti_id),
     foreign key(da_res_id) references Resposta (res_id));
     
-Create Table associadaapergunta (
-	ass_res_id int not null unique,
-    ass_per_id int not null unique,
-    primary key(ass_res_id, ass_per_id),
-    foreign key(ass_res_id) references Resposta(res_id),
-    foreign key(ass_per_id) references Pergunta(per_id));
-    
-Create Table contem (
-	con_per_id int not null unique,
-    con_sec_id int not null unique,
-    primary key(con_per_id, con_sec_id),
-    foreign key(con_per_id) references Pergunta(per_id),
-    foreign key(con_sec_id) references Seccao(sec_id));
-    
-Create Table tem (
-	tem_form_id int not null unique,
-    tem_sec_id int not null unique,
-    primary key(tem_form_id, tem_sec_id),
-    foreign key(tem_form_id) references Formulario(form_id),
-    foreign key(tem_sec_id) references Seccao(sec_id)); 
+Create Table Questionario (
+	quest_id int auto_increment,
+	quest_per_id int not null unique,
+    quest_sec_id int not null unique,
+    quest_form_id int not null unique,
+    primary key(quest_id),
+    foreign key(quest_sec_id) references Seccao(sec_id),
+    foreign key(quest_per_id) references Pergunta(per_id),
+    foreign key(quest_form_id) references Formulario(form_id));
+	
     
 Create Table edita (
 	edi_id int not null auto_increment,
@@ -169,13 +152,6 @@ Create Table edita (
     foreign key(edi_admi_id) references Administrador (admi_id),
     foreign key(edi_form_id) references Formulario (form_id));
     
-    Create Table ao (
-    ao_res_id int not null,
-	ao_form_id int not null,
-    primary key(ao_res_id, ao_form_id),
-    foreign key(ao_res_id) references Resposta (res_id),
-    foreign key(ao_form_id) references Formulario (form_id));
-    
 Create Table classificado (
 	cla_data datetime,
     cla_uti_id int not null,
@@ -183,5 +159,8 @@ Create Table classificado (
     primary key(cla_uti_id, cla_esc_id),
     foreign key(cla_uti_id) references Utilizador (uti_id),
     foreign key(cla_esc_id) references Escala (esc_id));
+    
+
+alter table Resposta add foreign key(res_quest_id) references Questionario(quest_id);
     
     

@@ -78,6 +78,7 @@ insert into perTipo (perTipo_id, perTipo_nome) values ('3', 'Múltipla');
 insert into perTipo (perTipo_id, perTipo_nome) values ('4', 'Extensa');
 insert into perTipo (perTipo_id, perTipo_nome) values ('5', 'Verdadeiro ou Falso');
 
+
 insert into utilizador (uti_id, uti_nome, uti_email, uti_dnsc, uti_morada, uti_genero, uti_cod_id, uti_idade, uti_naci) values ('1', 'André André', 'andre20@gmail.com', str_to_date('1998.03.04','%Y.%m.%d'), 'Rua José Régio, Amadora', 'M', '1', TIMESTAMPDIFF (YEAR, uti_dnsc, CURDATE()), 'portuguesa' );
 insert into utilizador (uti_id, uti_nome, uti_email, uti_dnsc, uti_morada, uti_genero, uti_cod_id, uti_idade, uti_naci) values ('2', 'Carla Ribeiro', 'carlaribas@hotmail.com', str_to_date('1978.07.27','%Y.%m.%d'), 'Rua Fernando Pessoa, Odivelas', 'F', '2', TIMESTAMPDIFF (YEAR, uti_dnsc, CURDATE()), 'portuguesa' );
 insert into utilizador (uti_id, uti_nome, uti_email, uti_dnsc, uti_morada, uti_genero, uti_cod_id, uti_idade, uti_naci) values ('3', 'Maria Almeida', 'mariaa@gmail.com', str_to_date('1995.12.25','%Y.%m.%d'), 'Rua Aquilino Ribeiro, Porto', 'F', '3', TIMESTAMPDIFF (YEAR, uti_dnsc, CURDATE()), 'portuguesa' );
@@ -115,24 +116,29 @@ insert into administrador (admi_id, admi_datainicio, admi_datafinal, admi_uti_id
 insert into administrador (admi_id, admi_datainicio, admi_datafinal, admi_uti_id) values ('4', '2020-12-16 10:09:01', '2020-12-16 10:55:02', '2');
 insert into administrador (admi_id, admi_datainicio, admi_datafinal, admi_uti_id) values ('5', '2021-02-14 22:35:00', '2021-02-14 23:02:30', '9');
 
+insert into seccao (sec_id, sec_nome) values ('1', 'Transportes');
+insert into seccao (sec_id, sec_nome) values ('2', 'Gasto Veículo');
+insert into seccao (sec_id) values ('3');
+insert into seccao (sec_id, sec_nome) values ('4', 'Consumo mensal');
+insert into seccao (sec_id, sec_nome) values ('5', 'Consumo desnecessário');
 
-insert into seccao (sec_id, sec_nome, sec_form_id) values ('1', 'Transportes', '1');
-insert into seccao (sec_id, sec_nome, sec_form_id) values ('2', 'Gasto Veículo', '2');
-insert into seccao (sec_id, sec_form_id) values ('3', '3');
-insert into seccao (sec_id, sec_nome, sec_form_id) values ('4', 'Consumo mensal', '4');
-insert into seccao (sec_id, sec_nome, sec_form_id) values ('5', 'Consumo desnecessário', '5');
+insert into pergunta (per_id, per_string, per_perTipo_id) values ('1', 'Quantos kilómetros fez hoje com o seu veículo?', '1');
+insert into pergunta (per_id, per_string, per_perTipo_id) values ('2', 'Costuma deslocar-se por transportes públicos quando possível?', '2');
+insert into pergunta (per_id, per_string, per_perTipo_id) values ('3', 'Tem noção das práticas nocivas que realiza?', '3');
+insert into pergunta (per_id, per_string, per_perTipo_id) values ('4', 'Sabendo que pode fazer a diferença, de que maneira pensa alterar o seu comportamento?', '4');
+insert into pergunta (per_id, per_string, per_perTipo_id) values ('5', 'Considera o aquecimento global uma matéria importante?', '5');
 
-insert into pergunta (per_id, per_string, per_sec_id, per_perTipo_id, per_res_id) values ('1', 'Quantos kilómetros fez hoje com o seu veículo?', '1', '1', '1');
-insert into pergunta (per_id, per_string, per_sec_id, per_perTipo_id, per_res_id) values ('2', 'Costuma deslocar-se por transportes públicos quando possível?', '2', '2', '2');
-insert into pergunta (per_id, per_string, per_sec_id, per_perTipo_id, per_res_id) values ('3', 'Tem noção das práticas nocivas que realiza?', '3', '3', '3');
-insert into pergunta (per_id, per_string, per_sec_id, per_perTipo_id, per_res_id) values ('4', 'Sabendo que pode fazer a diferença, de que maneira pensa alterar o seu comportamento?', '4', '4', '4');
-insert into pergunta (per_id, per_string, per_sec_id, per_perTipo_id, per_res_id) values ('5', 'Considera o aquecimento global uma matéria importante?', '5', '5', '5');
+insert into questionario (quest_id, quest_per_id, quest_sec_id, quest_form_id) values ('1', '1', '1', '1');
+insert into questionario (quest_id, quest_per_id, quest_sec_id, quest_form_id) values ('2', '2', '2', '2');
+insert into questionario (quest_id, quest_per_id, quest_sec_id, quest_form_id) values ('3', '3', '3', '3');
+insert into questionario (quest_id, quest_per_id, quest_sec_id, quest_form_id) values ('4', '4', '4', '4');
+insert into questionario (quest_id, quest_per_id, quest_sec_id, quest_form_id) values ('5', '5', '5', '5');
 
-insert into resposta (res_id, res_data, res_resTipo_id, res_per_id, res_uti_id, res_form_id) values ('1', null, '1', '1', '1', '1');
-insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_per_id, res_uti_id, res_form_id) values ('2', 'Sim', str_to_date('2020.07.22','%Y.%m.%d'), '2', '2', '2', '2');
-insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_per_id, res_uti_id, res_form_id) values ('3', 'Não considero relevante', null, '3', '3', '3', '3');
-insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_per_id, res_uti_id, res_form_id) values ('4', 'Desloco-me sempre de carro', null, '4', '4', '4', '4');
-insert into resposta (res_id, res_data, res_resTipo_id, res_per_id, res_uti_id, res_form_id) values ('5', str_to_date('2020.07.22','%Y.%m.%d'), '5', '5', '5', '5');
+insert into resposta (res_id, res_data, res_resTipo_id, res_uti_id, res_quest_id) values ('1', null, '1', '1', '1');
+insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_uti_id, res_quest_id) values ('2', 'Sim', str_to_date('2020.07.22','%Y.%m.%d'), '2', '2', '2');
+insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_uti_id, res_quest_id) values ('3', 'Não considero relevante', null, '3', '3', '3');
+insert into resposta (res_id, res_string, res_data, res_resTipo_id, res_uti_id, res_quest_id) values ('4', 'Desloco-me sempre de carro', null, '4', '4', '4');
+insert into resposta (res_id, res_data, res_resTipo_id, res_uti_id, res_quest_id) values ('5', str_to_date('2020.07.22','%Y.%m.%d'), '5', '5', '5');
 
 insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2020-11-25 20:06:00', '1', '2');
 insert into classificado(cla_data, cla_uti_id, cla_esc_id) values ('2019-10-22 21:05:00', '2', '3');
