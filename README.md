@@ -16,20 +16,22 @@
 
 ## Casos de utilização:
 
-### Preencher formulário 
+### Visualizar respostas dadas pelos utilizadores 
 **Descrição:**
 O utilizador preenche os campos de resposta do formulário, e submete o mesmo. O formulário baseia-se em obter os comportamentos poluentes do quotidiano do utilizador, e de direta ou indiretamente calcular as suas emissões de dióxido de carbono
 
 **Pré-condições:**
 - Inserir dados pessoais
+- O utilizador selecionar/preencher os campos de resposta.
+- Submeter o formulário com as respostas dadas.
+- A aplicação confirmar a submissão do formulário.
 
 **Passo a passo:**
-1. O utilizador seleciona/preenche os campos de resposta.
-2. Submete o formulário com as respostas dadas.
-3. A aplicação confirma a submissão do formulário.
+1. Abrir a aba das respostas 
+2. Verificar a resposta dada por utilizador dado o seu identificador (id)
 
 **Pós-condições:**
-- Receber os resultados e uma resposta personalizada ao formulário realizado.
+- Visualizar resposta do utilizador.
 
 ### Verificar formulários realizados
 **Descrição:**
