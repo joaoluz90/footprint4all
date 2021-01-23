@@ -8,10 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name="pergunta")
@@ -19,11 +20,10 @@ public class Pergunta {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="per_id") private int id;
     @Column(name="per_string") private String string;
-    @OneToMany @JoinColumn(name="res_per_id") @JsonIgnoreProperties({"pergunta"}) private List<Resposta> respostas;
+    @ManyToOne @JoinColumn(name="per_pertipo_id") @JsonIgnoreProperties({"tipopergunta"}) private PerTipo tipopergunta;
+    @OneToMany @JoinColumn(name="quest_per_id") @JsonIgnoreProperties({"perguntas"}) private List<Questionario> questionarios;
 
     public Pergunta() {}
-
-    
 
     public int getId() {
         return id;
@@ -37,13 +37,12 @@ public class Pergunta {
         this.string = string;
     }
 
-    public List<Resposta> getRespostas() {
-        return respostas;
+    public PerTipo getTipopergunta() {
+        return tipopergunta;
     }
 
-    public void setRespostas(List<Resposta> respostas) {
-        this.respostas = respostas;
+    public void setTipopergunta(PerTipo tipopergunta) {
+        this.tipopergunta = tipopergunta;
     }
 
-    
 }

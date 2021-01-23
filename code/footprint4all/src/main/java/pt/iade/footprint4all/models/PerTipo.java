@@ -19,7 +19,7 @@ public class PerTipo {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="pertipo_id") private int id;
     @Column(name="pertipo_nome") private String nome;
-    @OneToMany @JoinColumn(name="per_pertipo_id") @JsonIgnoreProperties({"pertipo"}) private List<Pergunta> perguntas;
+    @OneToMany @JoinColumn(name="per_pertipo_id") @JsonIgnoreProperties({"tipopergunta"}) private List<Pergunta> perguntas;
 
     public PerTipo() {}
 
@@ -34,14 +34,5 @@ public class PerTipo {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public List<Pergunta> getPerguntas() {
-        return perguntas;
-    }
-
-    public void setPerguntas(List<Pergunta> perguntas) {
-        this.perguntas = perguntas;
-    }
-    
     
 }

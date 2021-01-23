@@ -22,6 +22,7 @@ import pt.iade.footprint4all.models.repositories.UtilizadorRepository;
 @RequestMapping(path="/api/utilizadores")
 public class UtilizadorController {
     private Logger logger = LoggerFactory.getLogger(UtilizadorController.class);
+
     @Autowired
     private UtilizadorRepository utilizadorRepository;
 
@@ -35,7 +36,7 @@ public class UtilizadorController {
     public Utilizador getUtilizador(@PathVariable int id) {
         logger.info("Sending user with id "+id);
         Optional<Utilizador> _utilizador = utilizadorRepository.findById(id);
-        if (_utilizador.isEmpty()) throw new NotFoundException(""+id,"Escala","id");
+        if (_utilizador.isEmpty()) throw new NotFoundException(""+id,"User","id");
         else return _utilizador.get() ;
     }
 

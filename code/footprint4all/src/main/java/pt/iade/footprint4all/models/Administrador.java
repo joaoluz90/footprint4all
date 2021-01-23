@@ -32,8 +32,6 @@ public class Administrador {
 
     public Administrador() {}
 
-    
-
     public Date getDatainicio() {
         return datainicio;
     }

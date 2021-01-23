@@ -32,7 +32,7 @@ public class FormularioController {
     public Formulario getFormulario(@PathVariable int id) {
         logger.info("Sending form with id "+id);
         Optional<Formulario> _formulario = formularioRepository.findById(id);
-        if (_formulario.isEmpty()) throw new NotFoundException(""+id,"Escala","id");
+        if (_formulario.isEmpty()) throw new NotFoundException(""+id,"Form","id");
         else return _formulario.get() ;
     }
 }

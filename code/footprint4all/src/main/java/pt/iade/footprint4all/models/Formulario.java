@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,9 +22,8 @@ public class Formulario {
     @Column(name="form_id") private int id;
     @Column(name="form_nome") private String nome_formulario;
     @Column(name="form_data") private Date data;
-    @ManyToMany @JoinColumn(name="edi_form_id") @JsonIgnoreProperties({"formulario"}) private List<Edita> edicoes;
-    @ManyToMany @JoinColumn(name="sec_form_id") @JsonIgnoreProperties({"formulario"}) private List<Seccao> seccao;
-    @OneToMany @JoinColumn(name="res_form_id") @JsonIgnoreProperties({"formulario"}) private List<Resposta> respostas;
+    @OneToMany @JoinColumn(name="edi_form_id") @JsonIgnoreProperties({"forms"}) private List<Edita> edicoes;
+    @OneToMany @JoinColumn(name="quest_form_id") @JsonIgnoreProperties({"formulario"}) private List<Questionario> questionarios;
 
     public Formulario() {}
 
@@ -48,4 +46,20 @@ public class Formulario {
     public void setData(Date data) {
         this.data = data;
     }
+
+    public String getNome_formulario() {
+        return nome_formulario;
+    }
+
+    public void setNome_formulario(String nome_formulario) {
+        this.nome_formulario = nome_formulario;
+    }
+
+    public List<Edita> getEdicoes() {
+        return edicoes;
+    }
+
+    public void setEdicoes(List<Edita> edicoes) {
+        this.edicoes = edicoes;
+    }    
 }

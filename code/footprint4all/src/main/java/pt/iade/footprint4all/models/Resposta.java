@@ -17,7 +17,9 @@ public class Resposta {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="res_id") private int id;
     @Column(name="res_string") private String string;
-    @ManyToOne @JoinColumn(name = "res_per_id") @JsonIgnoreProperties({ "respostas" }) private Pergunta pergunta;
+    @ManyToOne @JoinColumn(name = "res_uti_id") @JsonIgnoreProperties({"resposta"}) private Utilizador utilizador;
+    @ManyToOne @JoinColumn(name="res_quest_id") @JsonIgnoreProperties({"respostas"}) private Questionario questionario;
+    @ManyToOne @JoinColumn(name="res_restipo_id") @JsonIgnoreProperties({"respostas"}) private ResTipo tiporesposta;
 
     public Resposta() {}
 
@@ -33,13 +35,28 @@ public class Resposta {
         this.string = string;
     }
 
-    public Pergunta getPergunta() {
-        return pergunta;
+    public ResTipo getTiporesposta() {
+        return tiporesposta;
     }
 
-    public void setPergunta(Pergunta pergunta) {
-        this.pergunta = pergunta;
+    public void setTiporesposta(ResTipo tiporesposta) {
+        this.tiporesposta = tiporesposta;
     }
 
+    public Utilizador getUtilizador() {
+        return utilizador;
+    }
+
+    public void setUtilizador(Utilizador utilizador) {
+        this.utilizador = utilizador;
+    }
+
+    public Questionario getQuestionario() {
+        return questionario;
+    }
+
+    public void setQuestionario(Questionario questionario) {
+        this.questionario = questionario;
+    }
     
 }

@@ -4,17 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Id;
 
 
 @Entity
-@Table(name="CodigoPostal")
+@Table(name="Codigopostal")
 public class CodigoPostal {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="cod_id") private int id;
@@ -22,7 +19,7 @@ public class CodigoPostal {
     @Column(name="cod_localidade") private String localidade;
     @Column(name="cod_concelho") private String concelho;
     @Column(name="cod_nrporta") private String nrporta;
-    @OneToOne @JoinColumn(name="uti_cod_id") @JsonIgnoreProperties({"codigoPostal"}) private Utilizador utilizador;
+    @OneToOne(mappedBy = "codigopostal") private Utilizador utilizador;
 
     public CodigoPostal() {}
 
@@ -61,16 +58,5 @@ public class CodigoPostal {
     public void setNrporta(String nrporta) {
         this.nrporta = nrporta;
     }
-
-    public Utilizador getUtilizador() {
-        return utilizador;
-    }
-
-    public void setUtilizador(Utilizador utilizador) {
-        this.utilizador = utilizador;
-    }
-
-    
-    
     
 }

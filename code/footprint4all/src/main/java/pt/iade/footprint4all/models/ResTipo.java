@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Id;
 
 
@@ -15,9 +18,9 @@ import javax.persistence.Id;
 @Table(name="restipo")
 public class ResTipo {
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name="respTip_id") private int id;
-    @Column(name="respTip_nome") private String nome;
-    @OneToMany @JoinColumn(name="res_resTip_id") private List<Resposta> respostas;
+    @Column(name="restipo_id") private int id;
+    @Column(name="restipo_nome") private String nome;
+    @OneToMany @JoinColumn(name="res_restipo_id") @JsonIgnoreProperties({"tiporesposta"}) private List<Resposta> respostas;
 
     public ResTipo() {}
 
@@ -40,5 +43,6 @@ public class ResTipo {
     public void setRespostas(List<Resposta> respostas) {
         this.respostas = respostas;
     }
+
     
 }

@@ -21,7 +21,7 @@ public class Escala {
     @Column(name="esc_id") private int id;
     @Column(name="esc_valor") private int valor;
     @Column(name="esc_desc") private String descricao;
-    @OneToMany @JoinColumn(name="cla_esc_id") @JsonIgnoreProperties({"escala"}) private List<Classificado> classificacoes;
+    @OneToMany @JoinColumn(name="esc_id") @JsonIgnoreProperties({"escala"}) private List<Classificado> classificacoes;
 
     public Escala() {}
 
@@ -45,14 +45,5 @@ public class Escala {
         this.descricao = descricao;
     }
 
-    public List<Classificado> getClassificacoes() {
-        return classificacoes;
-    }
-
-    public void setClassificacoes(List<Classificado> classificacoes) {
-        this.classificacoes = classificacoes;
-    }
-
-    
 }
 

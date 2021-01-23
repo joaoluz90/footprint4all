@@ -18,18 +18,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name="classificado")
 @IdClass(ClassificadoId.class)
 public class Classificado {
+    @Column(name="cla_data") private Date data;
     @Id @Column(name="cla_uti_id")
     @JsonIgnore private int utilizadorId;
-    @ManyToOne @MapsId("utilizadorId") @JoinColumn(name="cla_uti_id")
-    @JsonIgnoreProperties("classificado")
-    private Utilizador utilizador;
+    @ManyToOne @MapsId("utilizadorId") @JoinColumn(name="cla_uti_id") @JsonIgnoreProperties("classificado") private Utilizador utilizador;
     @Id @Column(name="cla_esc_id")
     @JsonIgnore private int escalaId;
-    @ManyToOne @MapsId("escalaId")
-    @JoinColumn(name="cla_esc_id")
-    @JsonIgnoreProperties("escala")
-    private Escala escala;
-    @Column(name="cla_data") private Date data;
+    @ManyToOne @MapsId("escalaId") @JoinColumn(name="cla_esc_id") @JsonIgnoreProperties("classificacoes") private Escala escala;
     
     public Classificado() {}
 
@@ -57,14 +52,6 @@ public class Classificado {
         this.utilizador = utilizador;
     }
 
-    public int getEscalaId() {
-        return escalaId;
-    }
-
-    public void setEscalaId(int escalaId) {
-        this.escalaId = escalaId;
-    }
-
     public Escala getEscala() {
         return escala;
     }
@@ -73,6 +60,11 @@ public class Classificado {
         this.escala = escala;
     }
 
-    
-    
+    public int getEscalaId() {
+        return escalaId;
+    }
+
+    public void setEscalaId(int escalaId) {
+        this.escalaId = escalaId;
+    }
 }
