@@ -31,14 +31,6 @@ public class Formulario {
         return id;
     }
 
-    public String getNome() {
-        return nome_formulario;
-    }
-
-    public void setNome(String nome) {
-        this.nome_formulario = nome;
-    }
-
     public Date getData() {
         return data;
     }

@@ -85,4 +85,15 @@ public class Utilizador {
     public void setCodigopostal(CodigoPostal codigopostal) {
         this.codigopostal = codigopostal;
     }
+
+    public Utilizador(int id, Date dnsc, String nome, String morada, Character genero, String nacionalidade,
+            CodigoPostal codigopostal) {
+        this.id = id;
+        this.dnsc = dnsc;
+        this.nome = nome;
+        this.morada = morada;
+        this.genero = genero;
+        this.nacionalidade = nacionalidade;
+        this.codigopostal = codigopostal;
+    }
 }

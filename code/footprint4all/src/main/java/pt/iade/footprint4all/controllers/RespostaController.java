@@ -23,13 +23,13 @@ public class RespostaController {
 
     @GetMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Resposta> getRespostas() {
-        logger.info("Sending all respostas information");
+        logger.info("Sending all answers information");
         return respostaRepository.findAll();
     }
 
     @GetMapping(path = "/{id}", produces= MediaType.APPLICATION_JSON_VALUE)
     public Resposta getResposta(@PathVariable int id) {
-        logger.info("Sending escala with id "+id);
+        logger.info("Sending resposta with id "+id);
         Optional<Resposta> _resposta = respostaRepository.findById(id);
         if (_resposta.isEmpty()) throw new NotFoundException(""+id,"Resposta","id");
         else return _resposta.get() ;
