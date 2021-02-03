@@ -10,6 +10,7 @@
 *
 ************************************************************/
 drop database if exists footprint4all;
+
 Create database footprint4all;
 
 use footprint4all;
@@ -98,7 +99,7 @@ Create Table Resposta (
 	res_id int auto_increment,
     res_string varchar(100) default 'Sem resposta',
     res_data date,
-    res_resTipo_id int not null unique,
+    res_resTipo_id int not null,
     res_uti_id int not null unique,
     res_quest_id int not null unique,
     primary key(res_id),
@@ -134,8 +135,8 @@ Create Table da(
     
 Create Table Questionario (
 	quest_id int auto_increment,
-	quest_per_id int not null unique,
-    quest_sec_id int not null unique,
+	quest_per_id int not null,
+    quest_sec_id int not null,
     quest_form_id int not null unique,
     primary key(quest_id),
     foreign key(quest_sec_id) references Seccao(sec_id),
@@ -154,7 +155,7 @@ Create Table edita (
     
 Create Table classificado (
 	cla_data datetime,
-    cla_uti_id int not null,
+    cla_uti_id int not null unique,
     cla_esc_id int not null,
     primary key(cla_uti_id, cla_esc_id),
     foreign key(cla_uti_id) references Utilizador (uti_id),
@@ -162,5 +163,3 @@ Create Table classificado (
     
 
 alter table Resposta add foreign key(res_quest_id) references Questionario(quest_id);
-    
-    
