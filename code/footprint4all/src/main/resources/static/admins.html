@@ -4,16 +4,22 @@
         <title> Footprint4all </title>
         <link rel="stylesheet" href="stylesheets/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="javascripts/listaRespostas.js"></script>
+        <script src="javascripts/listaAdmins.js"></script>
     </head>
     <body>
-        <header > Lista de respostas </header>  
+        <header> Lista de administradores <a href="edicoes.html">(edições)</a></header>  
         <nav>
             <a href="classificacao.html">Lista de classificações dos utilizadores</a>
+            <a href="index.html">Lista de respostas</a>
             <a href="escalas.html">Lista de escalas</a>
-            <a href="admins.html">Lista de administradores</a>
         </nav>     
-        <main id="main">           
+        <section> 
+            Utilizador: <input type="text" id="title">
+            Valor da escala: <input type="text" id="artist">
+            <input type="button" value="Filtrar" onclick="filtrar()">
+        </section>
+        <main id="main">
+            
         </main>
         <footer> FOOTER </footer>
     </body>

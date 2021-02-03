@@ -5,7 +5,7 @@ window.onload = function() {
 async function loadAlbuns() {
     try {
         let albuns = await $.ajax({
-            url: "/api/respostas",
+            url: "/api/admins",
             method: "get",
             dataType: "json"
         });
@@ -24,12 +24,11 @@ function showAlbuns(albuns) {
     let html ="";
     for (let album of albuns) {
         html += "<section onclick='showAlbum("+album.id+")'>"+
-        "<h3>"+album.string+"</h3>"+
-        "<p> Utilizador: "+album.utilizador.nome+"</p>"+
-        "<p> Questionário nº: "+album.questionario.id+"</p>"+
-        "<p> Formulário nº: "+album.questionario.formulario.id+"</p>"+
-        "<p> Secção: "+album.questionario.seccao.nome+"</p>"+
-        "<p> Pergunta: "+album.questionario.pergunta.string+"</p></section>";
+        "<h3>"+album.utilizador.nome+"</h3>"+
+        "<p> Data inicial: "+album.datainicio+"</p>"+
+        "<p> Data final: "+album.datafinal+"</p>"+
+        "<p>  Género: "+album.utilizador.genero+"</p>"+
+        "<p> Nacionalidade: "+album.utilizador.nacionalidade+"</p></section>";
     }
     elemMain.innerHTML = html;
 }
@@ -37,7 +36,7 @@ function showAlbuns(albuns) {
 
 function showAlbum(albumId) {
     sessionStorage.setItem("albumId",albumId);
-    window.location = "index.html";
+    window.location = "album.html";
 }
 
 async function filtrar() {

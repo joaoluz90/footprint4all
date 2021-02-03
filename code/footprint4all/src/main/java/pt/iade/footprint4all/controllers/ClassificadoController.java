@@ -28,11 +28,12 @@ public class ClassificadoController {
         return classificadoRepository.findAll();
     }
 
-    @GetMapping(path = "/{id}", produces= MediaType.APPLICATION_JSON_VALUE)  //problema com as classes ClassificacaoId e Classificacao
-    public Classificado getClassificacao(@PathVariable int id) {
+    @GetMapping(path = "/{id}", produces= MediaType.APPLICATION_JSON_VALUE) 
+        public Classificado getClassificacao(@PathVariable int id) {
         logger.info("Sending classificação with id "+id);
         Optional<Classificado> _classificacao = classificadoRepository.findById(id);
         if (_classificacao.isEmpty()) throw new NotFoundException(""+id,"Classificação","id");
         else return _classificacao.get() ;
     }
+
 }

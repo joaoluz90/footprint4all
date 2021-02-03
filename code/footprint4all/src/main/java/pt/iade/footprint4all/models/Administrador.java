@@ -25,9 +25,8 @@ public class Administrador {
     @Column(name="admi_id") private int id;
     @Column(name="admi_datainicio") private Date datainicio;
     @Column(name="admi_datafinal") private Date datafim;
-    @OneToMany @JoinColumn(name="edi_admi_id") @JsonIgnoreProperties({"administrador"}) private List<Edita> edits;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "admi_uti_id", referencedColumnName = "uti_id")
+    @OneToMany @JoinColumn(name="edi_admi_id") @JsonIgnoreProperties({"admin"}) private List<Edita> edits;
+    @OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "admi_uti_id", referencedColumnName = "uti_id")
     private Utilizador utilizador;
 
     public Administrador() {}
@@ -46,14 +45,6 @@ public class Administrador {
 
     public void setDatafim(Date datafim) {
         this.datafim = datafim;
-    }
-
-    public List<Edita> getEdits() {
-        return edits;
-    }
-
-    public void setEdits(List<Edita> edits) {
-        this.edits = edits;
     }
 
     public int getId() {
