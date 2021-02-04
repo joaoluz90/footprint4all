@@ -33,17 +33,17 @@ O utilizador preenche os campos de resposta do formulário, e submete o mesmo. O
 **Pós-condições:**
 - Visualizar resposta do utilizador.
 
-### Verificar formulários realizados
+### Utilizador responde ao questionário
 **Descrição:**
-O utilizador tem acesso a todos os formulários feitos por si. Pode visualizar os formulários respondidos individualmente.
+O utilizador acessa ao site footprint4all e escolhe qual questionário deseja responder.
 
 **Pré-condições:**
-- Ter feito formulários previamente.
+- Fornecer os seus dados pessoais
 
 **Passo a passo:**
-1. O utilizador vai ao seu histórico de "formulários realizados".
-2. Visualiza a lista de formulários realizados com as devidas respostas.
-3. Seleciona qual formulário respondido quer visualizar.
+1. O utilizador acede ao site.
+2. Visualiza umalista de questionários com vários tipos de secções.
+3. Seleciona qual questionário quer responder.
 
 **Pós-condições:**
 
