@@ -22,7 +22,7 @@ public class Resposta {
     @ManyToOne @JoinColumn(name="res_restipo_id") @JsonIgnoreProperties({"respostas"}) private ResTipo tiporesposta;
 
     public Resposta() {}
-
+    
     public int getId() {
         return id;
     }
@@ -57,6 +57,10 @@ public class Resposta {
 
     public void setQuestionario(Questionario questionario) {
         this.questionario = questionario;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
 }
