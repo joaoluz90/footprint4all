@@ -40,9 +40,9 @@ public class RespostaController {
 
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
     public Resposta saveResposta(@RequestBody Resposta newResposta) {
-        logger.info("Saving user with id: "+newResposta.getId());
-        Resposta utilizador = respostaRepository.save(newResposta);
-        return utilizador;
+        logger.info("Saving answer with id: "+newResposta.getId());
+        Resposta resposta = respostaRepository.save(newResposta);
+        return resposta;
     }
 
     @PutMapping(path ="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
